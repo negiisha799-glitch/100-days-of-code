@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int main() {
+float bs,da,hr,gs;
+printf("bs= ");
+scanf("%f",&bs);
+da=(.40)*bs;
+hr=(.20)*bs;
+gs=(bs+da+hr);
+printf("gs=%f",gs);
+    return 0;
+}
