@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+int main() {
+    long long binaryNum;
+    long long originalNum;
+    int remainder;
+    long long onesComplement = 0;
+    long long place = 1;
+
+    // Input the binary number
+    printf("Enter a binary number: ");
+    scanf("%lld", &binaryNum);
+
+    originalNum = binaryNum;
+
+    // Loop to calculate 1's complement
+    while (binaryNum != 0) {
+        remainder = binaryNum % 10;
+
+        // Check if the input is valid binary
+        if (remainder != 0 && remainder != 1) {
+            printf("Invalid binary number!\n");
+            return 1;
+        }
+
+        // Flip the bit
+        remainder = 1 - remainder;
+
+        // Build the 1's complement number
+        onesComplement += remainder * place;
+        place *= 10;
+
+        binaryNum /= 10;
+    }
+
+    printf("The 1's complement of %lld is %lld\n", originalNum, onesComplement);
+
+    return 0;
+}
