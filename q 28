@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main() {
+    int n, i;
+    long long product = 1;   // use long long to handle big numbers
+    int flag = 0;            // to check if there are even numbers
+
+    // Taking input from the user
+    printf("Enter the value of n: ");
+    scanf("%d", &n);
+
+    // Loop to find product of even numbers
+    for (i = 1; i <= n; i++) {
+        if (i % 2 == 0) {    // check if number is even
+            product *= i;
+            flag = 1;
+        }
+    }
+
+    // Display the result
+    if (flag == 0) {
+        printf("No even numbers between 1 and %d\n", n);
+    } else {
+        printf("Product of even numbers from 1 to %d = %lld\n", n, product);
+    }
+
+    return 0;
+}
