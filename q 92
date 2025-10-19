@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main() {
+    char str[100];
+    int freq[26] = {0}; // frequency array for 'a' to 'z'
+    int i;
+    char firstRepeat = '\0';
+
+    // Input string
+    printf("Enter a string: ");
+    fgets(str, sizeof(str), stdin);
+
+    // Traverse the string to count frequencies
+    for(i = 0; str[i] != '\0' && str[i] != '\n'; i++) {
+        if(str[i] >= 'a' && str[i] <= 'z') {
+            freq[str[i] - 'a']++;
+
+            // Check if it is repeating
+            if(freq[str[i] - 'a'] == 2) {
+                firstRepeat = str[i];
+                break;  // stop at the first repeating character
+            }
+        }
+    }
+
+    if(firstRepeat != '\0') {
+        printf("The first repeating lowercase alphabet is: %c\n", firstRepeat);
+    } else {
+        printf("No repeating lowercase alphabet found.\n");
+    }
+
+    return 0;
+}
