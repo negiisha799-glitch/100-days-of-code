@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main() {
+    char str[100];
+    int i = 0;
+    char ch;
+
+    // Input string
+    printf("Enter a string: ");
+    fgets(str, sizeof(str), stdin);
+
+    // Toggle case for each character
+    while(str[i] != '\0' && str[i] != '\n') {
+        ch = str[i];
+        if(ch >= 'a' && ch <= 'z') {
+            str[i] = ch - 32;  // convert to uppercase
+        } 
+        else if(ch >= 'A' && ch <= 'Z') {
+            str[i] = ch + 32;  // convert to lowercase
+        }
+        i++;
+    }
+
+    // Print the modified string
+    printf("String after toggling case: %s\n", str);
+
+    return 0;
+}
