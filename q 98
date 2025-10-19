@@ -1,0 +1,44 @@
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+
+int main() {
+    char name[100];
+    int i, lastSpaceIndex = -1;
+
+    // Input full name
+    printf("Enter your full name: ");
+    fgets(name, sizeof(name), stdin);
+
+    // Remove newline character
+    name[strcspn(name, "\n")] = '\0';
+
+    // Find the index of the last space (before surname)
+    for(i = 0; name[i] != '\0'; i++) {
+        if(name[i] == ' ') {
+            lastSpaceIndex = i;
+        }
+    }
+
+    printf("Output: ");
+
+    // Print initials for all words except the last word (surname)
+    for(i = 0; i <= lastSpaceIndex; i++) {
+        if(i == 0 && name[i] != ' ') {
+            printf("%c. ", toupper(name[i]));  // first initial
+        }
+        if(name[i] == ' ' && name[i+1] != ' ' && name[i+1] != '\0') {
+            printf("%c. ", toupper(name[i+1]));  // subsequent initials
+        }
+    }
+
+    // Print the surname (last word)
+    if(lastSpaceIndex != -1) {
+        printf("%s\n", &name[lastSpaceIndex + 1]);
+    } else {
+        // If only one word, print as is
+        printf("%s\n", name);
+    }
+
+    return 0;
+}
