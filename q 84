@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main() {
+    char str[100];
+    int i = 0;
+    char ch;
+
+    // Input string
+    printf("Enter a string in lowercase: ");
+    fgets(str, sizeof(str), stdin);
+
+    // Convert to uppercase
+    while(str[i] != '\0' && str[i] != '\n') {
+        ch = str[i];
+        if(ch >= 'a' && ch <= 'z') {
+            str[i] = ch - 32;  // ASCII difference between lowercase and uppercase
+        }
+        i++;
+    }
+
+    // Print the converted string
+    printf("String in uppercase: %s", str);
+
+    return 0;
+}
