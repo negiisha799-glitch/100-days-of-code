@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main() {
+    int i, j;
+    int line_stars[] = {1, 3, 5, 7, 9, 7,  5, 3, 1};
+    
+    
+    for(i = 0; i < 9; i++) {
+        
+        for(j = 0; j < line_stars[i]; j++) {
+            printf("*");
+        }
+        printf("\n");
+    }
+    return 0;
+}
