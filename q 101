@@ -1,0 +1,67 @@
+#include <stdio.h>
+
+// Function to find first occurrence of target
+int firstOccurrence(int arr[], int n, int target) {
+    int start = 0, end = n - 1, result = -1;
+    while (start <= end) {
+        int mid = (start + end) / 2;
+        if (arr[mid] == target) {
+            result = mid;      // store index
+            end = mid - 1;     // search towards left for first occurrence
+        } else if (arr[mid] > target) {
+            end = mid - 1;
+        } else {
+            start = mid + 1;
+        }
+    }
+    return result;
+}
+
+// Function to find last occurrence of target
+int lastOccurrence(int arr[], int n, int target) {
+    int start = 0, end = n - 1, result = -1;
+    while (start <= end) {
+        int mid = (start + end) / 2;
+        if (arr[mid] == target) {
+            result = mid;      // store index
+            start = mid + 1;   // search towards right for last occurrence
+        } else if (arr[mid] > target) {
+            end = mid - 1;
+        } else {
+            start = mid + 1;
+        }
+    }
+    return result;
+}
+
+int main() {
+    int n, target;
+
+    // Input array size
+    printf("Enter number of elements: ");
+    scanf("%d", &n);
+
+    int nums[n];
+
+    // Input sorted array
+    printf("Enter elements (sorted): ");
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &nums[i]);
+    }
+
+    // Input target
+    printf("Enter target: ");
+    scanf("%d", &target);
+
+    int first = firstOccurrence(nums, n, target);
+    int last = lastOccurrence(nums, n, target);
+
+    if (first == -1 && last == -1) {
+        printf("-1 -1\n");
+    } else {
+        printf("First occurrence index: %d\n", first);
+        printf("Last occurrence index: %d\n", last);
+    }
+
+    return 0;
+}
