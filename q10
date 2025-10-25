@@ -3,16 +3,16 @@
 int main() {
     int totalSeconds, hours, minutes, seconds;
 
-    // Input time in seconds
+    
     printf("Enter time in seconds: ");
     scanf("%d", &totalSeconds);
 
-    // Convert to hours, minutes, seconds
-    hours = totalSeconds / 3600;             // 1 hour = 3600 seconds
-    minutes = (totalSeconds % 3600) / 60;    // remaining minutes
-    seconds = totalSeconds % 60;             // remaining seconds
+    
+    hours = totalSeconds / 3600;             
+    minutes = (totalSeconds % 3600) / 60;    
+    seconds = totalSeconds % 60;             
 
-    // Display result
+
     printf("%d seconds = %d hours %d minutes %d seconds\n",
            totalSeconds, hours, minutes, seconds);
 
