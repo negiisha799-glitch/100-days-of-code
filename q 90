@@ -5,11 +5,10 @@ int main() {
     int i = 0;
     char ch;
 
-    // Input string
+    
     printf("Enter a string: ");
     fgets(str, sizeof(str), stdin);
 
-    // Toggle case for each character
     while(str[i] != '\0' && str[i] != '\n') {
         ch = str[i];
         if(ch >= 'a' && ch <= 'z') {
@@ -21,7 +20,7 @@ int main() {
         i++;
     }
 
-    // Print the modified string
+    
     printf("String after toggling case: %s\n", str);
 
     return 0;
