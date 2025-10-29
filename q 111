@@ -21,7 +21,7 @@ int main() {
 
     printf("First negative elements in each subarray of size %d: ", k);
 
-    // Traverse all windows
+    
     for (int i = 0; i <= n - k; i++) {
         int firstNegative = 0;  // 0 if no negative found
         for (int j = 0; j < k; j++) {
