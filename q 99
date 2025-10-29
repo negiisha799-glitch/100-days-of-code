@@ -4,11 +4,11 @@
 int main() {
     char date[20], day[3], month[3], year[5];
     
-    // Input date in format dd/mm/yyyy
+    
     printf("Enter date in format dd/mm/yyyy: ");
     scanf("%s", date);
 
-    // Extract day, month, and year
+    
     strncpy(day, date, 2);
     day[2] = '\0';
 
@@ -18,7 +18,7 @@ int main() {
     strncpy(year, date + 6, 4);
     year[4] = '\0';
 
-    // Convert month number to month name
+    
     char monthName[4];
     if (strcmp(month, "01") == 0)
         strcpy(monthName, "Jan");
@@ -47,7 +47,7 @@ int main() {
     else
         strcpy(monthName, "???");
 
-    // Print in new format dd-Mon-yyyy
+    
     printf("Converted date: %s-%s-%s\n", day, monthName, year);
 
     return 0;
