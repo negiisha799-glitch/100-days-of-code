@@ -7,11 +7,11 @@ int main() {
     int i = 0, j = 0, maxLength = 0;
     char longestWord[50] = "";
 
-    // Input sentence
+    
     printf("Enter a sentence: ");
     fgets(sentence, sizeof(sentence), stdin);
 
-    // Traverse the sentence word by word
+    
     while(1) {
         if(sentence[i] != ' ' && sentence[i] != '\0' && sentence[i] != '\n') {
             word[j] = sentence[i];
