@@ -6,17 +6,17 @@ int main() {
     int i = 0;
     char ch;
 
-    // Input string
+    
     printf("Enter a string: ");
     fgets(str, sizeof(str), stdin);
 
-    // Traverse the string
+    
     while(str[i] != '\0' && str[i] != '\n') {
         ch = str[i];
 
-        // Check if character is an alphabet
+        
         if((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z')) {
-            // Convert to lowercase for simplicity
+            
             char lower = (ch >= 'A' && ch <= 'Z') ? ch + 32 : ch;
 
             if(lower == 'a' || lower == 'e' || lower == 'i' || lower == 'o' || lower == 'u') {
