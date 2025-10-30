@@ -2,23 +2,23 @@
 
 int main() {
     int n, i;
-    long long fact = 1;   // long long is used to handle large results
+    long long fact = 1;   
 
-    // Taking input from the user
+    
     printf("Enter a number: ");
     scanf("%d", &n);
 
-    // Factorial is not defined for negative numbers
+    
     if (n < 0) {
         printf("Factorial of a negative number doesn't exist.\n");
     } 
     else {
-        // Loop to calculate factorial
+        
         for (i = 1; i <= n; i++) {
             fact *= i;
         }
 
-        // Display the result
+        
         printf("Factorial of %d = %lld\n", n, fact);
     }
 
