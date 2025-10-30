@@ -3,18 +3,18 @@
 int main() {
     int num, reverse = 0, remainder;
 
-    // Taking input from the user
+    
     printf("Enter a number: ");
     scanf("%d", &num);
 
-    // Loop to reverse the number
+    
     while (num != 0) {
-        remainder = num % 10;           // get last digit
-        reverse = reverse * 10 + remainder; // add it to reverse
-        num = num / 10;                 // remove last digit
+        remainder = num % 10;           
+        reverse = reverse * 10 + remainder;
+        num = num / 10;                 
     }
 
-    // Display the reversed number
+    
     printf("Reversed number = %d\n", reverse);
 
     return 0;
