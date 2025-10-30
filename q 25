@@ -10,7 +10,7 @@ int main() {
     scanf("%d", &num1);
 
     printf("Enter an operator (+, -, x, /, %%): ");
-    scanf(" %c", &op);  // Note the space before %c to avoid input issues
+    scanf(" %c", &op);  
 
     printf("Enter second number: ");
     scanf("%d", &num2);
