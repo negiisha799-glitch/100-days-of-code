@@ -2,24 +2,24 @@
 
 int main() {
     int num, remainder, product = 1;
-    int hasOddDigit = 0;  // To check if there is at least one odd digit
+    int hasOddDigit = 0;  
 
-    // Input the number
+    
     printf("Enter a positive integer: ");
     scanf("%d", &num);
 
     int originalNum = num;
 
-    // Loop to calculate product of odd digits
+    
     while (num != 0) {
-        remainder = num % 10; // Extract last digit
+        remainder = num % 10; 
 
-        if (remainder % 2 != 0) { // Check if digit is odd
+        if (remainder % 2 != 0) { 
             product *= remainder;
             hasOddDigit = 1;
         }
 
-        num /= 10; // Remove last digit
+        num /= 10; 
     }
 
     if (hasOddDigit)
