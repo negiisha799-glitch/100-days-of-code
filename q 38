@@ -3,17 +3,17 @@
 int main() {
     int num, sum = 0, remainder;
 
-    // Input the number
+    
     printf("Enter a positive integer: ");
     scanf("%d", &num);
 
     int originalNum = num;
 
-    // Loop to calculate sum of digits
+    
     while (num != 0) {
-        remainder = num % 10;  // Extract last digit
-        sum += remainder;      // Add to sum
-        num /= 10;             // Remove last digit
+        remainder = num % 10;  
+        sum += remainder;      
+        num /= 10;            
     }
 
     printf("The sum of digits of %d is %d\n", originalNum, sum);
