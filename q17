@@ -4,7 +4,7 @@
 int main() {
     float a, b, c, root1, root2, discriminant;
 
-    // Input coefficients
+    
     printf("Enter coefficients a, b, c: ");
     scanf("%f %f %f", &a, &b, &c);
 
