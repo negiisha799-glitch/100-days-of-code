@@ -3,9 +3,9 @@
 int main() {
     char ch;
 
-    // Input a character
+    
     printf("Enter a character: ");
-    scanf(" %c", &ch);  // space before %c to ignore newline
+    scanf("%c", &ch);  
 
     // Check type of character
     if (ch >= 'A' && ch <= 'Z') {
