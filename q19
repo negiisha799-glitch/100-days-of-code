@@ -1,28 +1,27 @@
 #include <stdio.h>
-
 int main() {
-    float a, b, c;
-
-    // Input the sides of the triangle
-    printf("Enter the three sides of the triangle: ");
-    scanf("%f %f %f", &a, &b, &c);
-
-    // First, check if a valid triangle
-    if (a + b > c && a + c > b && b + c > a) {
-        // Check type of triangle
-        if (a == b && b == c) {
-            printf("The triangle is Equilateral.\n");
-        } 
-        else if (a == b || b == c || a == c) {
-            printf("The triangle is Isosceles.\n");
-        } 
-        else {
-            printf("The triangle is Scalene.\n");
+    float side1, side2, side3;
+    
+    printf("enter three sides of the traingle: ");
+    scanf("%f %f %f", &side1, &side2, &side3);
+    
+    if ((side1 + side2 > side3) &&
+        (side2 + side3 > side1) &&
+        (side1 + side3 > side2)) {
+            
+            if (side1 == side2 && side2 == side3) {
+                printf("equilateral traingle\n");
+            }
+            else if (side1 == side2 || side2 == side3 || side1 == side3) {
+                printf("isosceles triangle\n");
+            }
+            else {
+                printf("scalene triangle\n");
+            }
         }
-    } 
-    else {
-        printf("Not a valid triangle.\n");
-    }
-
-    return 0;
+        else {
+            printf("the given side dont form a valid traingle\n");
+            
+}
+return 0;
 }
