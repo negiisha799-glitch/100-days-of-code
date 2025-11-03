@@ -12,11 +12,11 @@ int main() {
           printf("Fine amount: %.2f\n", fine);
           }
       else if (days <=10) {
-          fine = (5*2) + (days - 5) * 4;
+          fine = (5 * 2) + (days - 5) * 4;
           printf("Fine amount: %.2f\n ", fine);
       }      
       else if (days <= 30) {
-          fine = (5*2) + (5 *4) + (days - 10) *6;
+          fine = (5 * 2) + (5 * 4) + (days - 10) * 6;
           printf("Fine amount: %.2f\n", fine);
       }
       else{
