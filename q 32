@@ -3,20 +3,20 @@
 int main() {
     int num, original, reverse = 0, remainder;
 
-    // Taking input from the user
+    
     printf("Enter a number: ");
     scanf("%d", &num);
 
-    original = num; // store original number
+    original = num; 
 
-    // Reversing the number
+    
     while (num != 0) {
-        remainder = num % 10;             // get last digit
-        reverse = reverse * 10 + remainder; // build reversed number
-        num = num / 10;                   // remove last digit
+        remainder = num % 10;             
+        reverse = reverse * 10 + remainder; 
+        num = num / 10;                  
     }
 
-    // Checking palindrome
+    
     if (original == reverse) {
         printf("%d is a palindrome.\n", original);
     } else {
