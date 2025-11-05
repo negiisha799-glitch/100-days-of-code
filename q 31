@@ -3,24 +3,24 @@
 int main() {
     int num, binary[32], i = 0;
 
-    // Taking input from the user
+    
     printf("Enter a number: ");
     scanf("%d", &num);
 
-    // Special case for 0
+    
     if (num == 0) {
         printf("Binary: 0\n");
         return 0;
     }
 
-    // Converting to binary (storing remainders)
+    
     while (num > 0) {
         binary[i] = num % 2;
         num = num / 2;
         i++;
     }
 
-    // Printing binary in reverse order
+    
     printf("Binary: ");
     for (i = i - 1; i >= 0; i--) {
         printf("%d", binary[i]);
