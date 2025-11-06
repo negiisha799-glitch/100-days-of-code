@@ -1,0 +1,46 @@
+#include <stdio.h>
+#include <ctype.h>
+
+int main() {
+    FILE *fp;
+    char filename[100], ch;
+    int characters = 0, words = 0, lines = 0;
+    int inWord = 0;  // flag to track if we are inside a word
+
+    // Ask user for file name
+    printf("Enter the filename to read: ");
+    scanf("%s", filename);
+
+    // Open file in read mode
+    fp = fopen(filename, "r");
+    if (fp == NULL) {
+        printf("Error: Could not open file %s\n", filename);
+        return 1;
+    }
+
+    // Read file character by character
+    while ((ch = fgetc(fp)) != EOF) {
+        characters++;
+
+        // Count lines
+        if (ch == '\n')
+            lines++;
+
+        // Check for word boundaries
+        if (isspace(ch))
+            inWord = 0;
+        else if (inWord == 0) {
+            inWord = 1;
+            words++;
+        }
+    }
+
+    fclose(fp);
+
+    printf("\nFile Statistics for '%s':\n", filename);
+    printf("Total Characters: %d\n", characters);
+    printf("Total Words: %d\n", words);
+    printf("Total Lines: %d\n", lines);
+
+    return 0;
+}
