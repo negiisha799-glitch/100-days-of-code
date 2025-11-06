@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main() {
+    int n, i;
+    printf("Enter the size of the array: ");
+    scanf("%d", &n);
+    
+    int arr[n];
+    printf("Enter %d elements (one element is repeated):\n", n);
+    
+    int visited[n];  // helper array to mark visited elements
+    for (i = 0; i < n; i++) 
+        visited[i] = 0;  // initialize all as unvisited
+
+    for (i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+        
+        // check if already visited
+        if (visited[arr[i]] == 1) {
+            printf("Repeated element is: %d\n", arr[i]);
+            return 0; // stop after finding the repeated element
+        }
+        visited[arr[i]] = 1;
+    }
+
+    printf("No repeated element found.\n");
+    return 0;
+}
