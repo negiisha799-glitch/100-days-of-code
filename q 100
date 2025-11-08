@@ -5,18 +5,18 @@ int main() {
     char str[100];
     int len, i, j, k;
 
-    // Input string
-    printf("Enter a string: ");
+    
+    printf(enter a string: ");
     scanf("%s", str);
 
     len = strlen(str);
 
     printf("All substrings are:\n");
 
-    // Generate all substrings
+    
     for (i = 0; i < len; i++) {
         for (j = i; j < len; j++) {
-            // Print substring from index i to j
+            
             for (k = i; k <= j; k++) {
                 printf("%c", str[k]);
             }
