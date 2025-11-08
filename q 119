@@ -8,17 +8,17 @@ int main() {
     int arr[n];
     printf("Enter %d elements (one element is repeated):\n", n);
     
-    int visited[n];  // helper array to mark visited elements
+    int visited[n];  
     for (i = 0; i < n; i++) 
-        visited[i] = 0;  // initialize all as unvisited
+        visited[i] = 0;  
 
     for (i = 0; i < n; i++) {
         scanf("%d", &arr[i]);
         
-        // check if already visited
+        
         if (visited[arr[i]] == 1) {
             printf("Repeated element is: %d\n", arr[i]);
-            return 0; // stop after finding the repeated element
+            return 0; 
         }
         visited[arr[i]] = 1;
     }
