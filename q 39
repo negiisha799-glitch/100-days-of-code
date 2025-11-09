@@ -1,31 +1,18 @@
 #include <stdio.h>
 
 int main() {
-    int num, remainder, product = 1;
-    int hasOddDigit = 0;  
-
+    int num, digit, product = 1;
     
-    printf("Enter a positive integer: ");
+    printf("Enter a number: ");
     scanf("%d", &num);
-
-    int originalNum = num;
-
     
-    while (num != 0) {
-        remainder = num % 10; 
-
-        if (remainder % 2 != 0) { 
-            product *= remainder;
-            hasOddDigit = 1;
-        }
-
-        num /= 10; 
+    while(num > 0) {
+        digit = num % 10;
+        if(digit % 2 != 0)
+        product = product * digit;
+        num = num / 10;
     }
-
-    if (hasOddDigit)
-        printf("The product of odd digits of %d is %d\n", originalNum, product);
-    else
-        printf("There are no odd digits in %d\n", originalNum);
-
+    printf("Product of odd digits = %d\n", product);
+    
     return 0;
 }
