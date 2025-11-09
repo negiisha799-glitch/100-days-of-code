@@ -1,39 +1,22 @@
 #include <stdio.h>
 
 int main() {
-    long long binaryNum;
-    long long originalNum;
-    int remainder;
-    long long onesComplement = 0;
-    long long place = 1;
-
+    char binary[50];
+    int i;
     
     printf("Enter a binary number: ");
-    scanf("%lld", &binaryNum);
-
-    originalNum = binaryNum;
-
+    scanf("%d", binary);
     
-    while (binaryNum != 0) {
-        remainder = binaryNum % 10;
-
-        
-        if (remainder != 0 && remainder != 1) {
-            printf("Invalid binary number!\n");
-            return 1;
+    for(i = 0; binary[i] != '\0'; i++) {
+        if(binary[i] == '0')
+        binary[i] = '1';
+        else if(binary[i] == '1')
+        binary[i] = '0';
+        else {
+            printf("Invalid binary number.\n");
+            return 0;
         }
-
-        
-        remainder = 1 - remainder;
-
-        
-        onesComplement += remainder * place;
-        place *= 10;
-
-        binaryNum /= 10;
     }
-
-    printf("The 1's complement of %lld is %lld\n", originalNum, onesComplement);
-
+    printf("1's Complement = %s\n", binary);
     return 0;
 }
