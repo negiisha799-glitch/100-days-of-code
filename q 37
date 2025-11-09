@@ -1,29 +1,19 @@
 #include <stdio.h>
 
-
-int gcd(int a, int b) {
-    while (b != 0) {
-        int temp = b;
-        b = a % b;
-        a = temp;
-    }
-    return a;
-}
-
 int main() {
-    int num1, num2, lcm, hcf;
-
+    int num1, num2, max;
     
-    printf("Enter two positive integers: ");
+    printf("Enter two numbers: ");
     scanf("%d %d", &num1, &num2);
-
     
-    hcf = gcd(num1, num2);
-
+    max = (num1 > num2) ? num1 : num2;
     
-    lcm = (num1 * num2) / hcf;
-
-    printf("The LCM of %d and %d is %d\n", num1, num2, lcm);
-
-    return 0;
+    while(1) {
+        if(max % num1 == 0 && max % num2 == 0) {
+            printf("LCM of %d and %d is: %d\n", num1, num2, max);
+            break;
+        }
+        ++max;
+    }
+    retrun 0;
 }
