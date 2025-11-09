@@ -15,5 +15,5 @@ int main() {
         }
         ++max;
     }
-    retrun 0;
+    return 0;
 }
