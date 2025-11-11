@@ -2,22 +2,18 @@
 
 int main() {
     int n;
-    double sum = 0.0;
-    int numerator = 1;
-    int denominator;
-
-    // Input number of terms
-    printf("Enter the number of terms: ");
+    float sum = 0.0;
+    int numerator = 1, denominator = 2;
+    
+    printf("Enter number of terms: ");
     scanf("%d", &n);
-
-    // Loop to calculate the sum
+    
     for (int i = 1; i <= n; i++) {
-        denominator = numerator + 1;         // denominator is numerator + 1
-        sum += (double)numerator / denominator; // add the fraction to sum
-        numerator += 2;                      // numerator increases by 2
+        sum = sum + (float)numerator / denominator;
+        numerator += 2;
+        denominator += 2;
+        
     }
-
-    printf("Sum of the series up to %d terms is: %.2lf\n", n, sum);
-
+    printf("Approximate sum: %.1f\n", sum);
     return 0;
 }
