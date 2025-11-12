@@ -5,26 +5,26 @@ int main() {
     char filename[100];
     char line[200];
 
-    // Ask the user for the filename
+    
     printf("Enter the filename to open: ");
     scanf("%s", filename);
 
-    // Try to open the file in read mode
+    
     fp = fopen(filename, "r");
 
-    // Check if file exists or can be opened
+    
     if (fp == NULL) {
         printf("Error: Could not open file '%s'. File may not exist.\n", filename);
         return 1;
     }
 
-    // File exists — display its content
+    
     printf("\nContents of '%s':\n\n", filename);
     while (fgets(line, sizeof(line), fp) != NULL) {
         printf("%s", line);
     }
 
-    // Close the file
+    
     fclose(fp);
     printf("\n\nEnd of file reached.\n");
 
