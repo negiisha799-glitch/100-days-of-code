@@ -2,26 +2,22 @@
 
 int main() {
     long num;
-    int digitCount[10] = {0}; // Array to store count of each digit
+    int digitCount[10] = {0}; 
     int i, maxCount = 0, mostFrequentDigit;
 
-    // Input the number
     printf("Enter an integer number: ");
     scanf("%ld", &num);
 
-    // Handle negative numbers
     if(num < 0) {
         num = -num;
     }
 
-    // Count the occurrence of each digit
     while(num > 0) {
         int digit = num % 10;
         digitCount[digit]++;
         num /= 10;
     }
 
-    // Find the digit with the maximum count
     for(i = 0; i < 10; i++) {
         if(digitCount[i] > maxCount) {
             maxCount = digitCount[i];
