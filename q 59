@@ -4,17 +4,14 @@ int main() {
     int arr[100], n, i;
     int evenCount = 0, oddCount = 0;
 
-    // Input number of elements
     printf("Enter the number of elements in the array: ");
     scanf("%d", &n);
 
-    // Read elements into the array
     printf("Enter %d elements:\n", n);
     for(i = 0; i < n; i++) {
         scanf("%d", &arr[i]);
     }
 
-    // Count even and odd numbers
     for(i = 0; i < n; i++) {
         if(arr[i] % 2 == 0) {
             evenCount++;
@@ -23,7 +20,6 @@ int main() {
         }
     }
 
-    // Display the result
     printf("Total even numbers: %d\n", evenCount);
     printf("Total odd numbers: %d\n", oddCount);
 
