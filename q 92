@@ -2,7 +2,7 @@
 
 int main() {
     char str[100];
-    int freq[26] = {0}; // frequency array for 'a' to 'z'
+    int freq[26] = {0}; 
     int i;
     char firstRepeat = '\0';
 
@@ -18,7 +18,7 @@ int main() {
             
             if(freq[str[i] - 'a'] == 2) {
                 firstRepeat = str[i];
-                break;  // stop at the first repeating character
+                break;  
             }
         }
     }
