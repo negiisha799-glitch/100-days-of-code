@@ -12,10 +12,10 @@ int main() {
     while(str[i] != '\0' && str[i] != '\n') {
         ch = str[i];
         if(ch >= 'a' && ch <= 'z') {
-            str[i] = ch - 32;  // convert to uppercase
+            str[i] = ch - 32;  
         } 
         else if(ch >= 'A' && ch <= 'Z') {
-            str[i] = ch + 32;  // convert to lowercase
+            str[i] = ch + 32;  
         }
         i++;
     }
