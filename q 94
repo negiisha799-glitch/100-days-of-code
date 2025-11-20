@@ -17,13 +17,13 @@ int main() {
             word[j] = sentence[i];
             j++;
         } else {
-            if(j > 0) {  // end of a word
+            if(j > 0) {  
                 word[j] = '\0';
                 if(j > maxLength) {
                     maxLength = j;
                     strcpy(longestWord, word);
                 }
-                j = 0;  // reset for next word
+                j = 0;  
             }
             if(sentence[i] == '\0' || sentence[i] == '\n') break;
         }
