@@ -5,23 +5,23 @@ int main() {
     char sentence[200];
     int i = 0, start, end;
 
-    // Input sentence
+    
     printf("Enter a sentence: ");
     fgets(sentence, sizeof(sentence), stdin);
 
-    // Remove newline character
+    
     sentence[strcspn(sentence, "\n")] = '\0';
 
-    // Traverse the sentence
+    
     while(sentence[i] != '\0') {
-        // Find the start of a word
+        
         start = i;
         while(sentence[i] != ' ' && sentence[i] != '\0') {
             i++;
         }
         end = i - 1;
 
-        // Reverse the current word
+        
         while(start < end) {
             char temp = sentence[start];
             sentence[start] = sentence[end];
@@ -30,11 +30,11 @@ int main() {
             end--;
         }
 
-        // Move to the next word
+        
         if(sentence[i] != '\0') i++;
     }
 
-    // Print the modified sentence
+    
     printf("Sentence after reversing each word: %s\n", sentence);
 
     return 0;
