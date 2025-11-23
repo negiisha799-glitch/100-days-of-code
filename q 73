@@ -4,13 +4,13 @@ int main() {
     int matrix[10][10], rowSum[10];
     int rows, cols, i, j;
 
-    // Input number of rows and columns
+    
     printf("Enter number of rows: ");
     scanf("%d", &rows);
     printf("Enter number of columns: ");
     scanf("%d", &cols);
 
-    // Input matrix elements
+    
     printf("Enter elements of the matrix:\n");
     for(i = 0; i < rows; i++) {
         for(j = 0; j < cols; j++) {
@@ -18,15 +18,15 @@ int main() {
         }
     }
 
-    // Calculate sum of each row and store in rowSum array
+    
     for(i = 0; i < rows; i++) {
-        rowSum[i] = 0; // Initialize sum for current row
+        rowSum[i] = 0; 
         for(j = 0; j < cols; j++) {
             rowSum[i] += matrix[i][j];
         }
     }
 
-    // Display the matrix
+    
     printf("\nThe matrix is:\n");
     for(i = 0; i < rows; i++) {
         for(j = 0; j < cols; j++) {
@@ -35,7 +35,7 @@ int main() {
         printf("\n");
     }
 
-    // Display the sum of each row
+
     printf("\nSum of each row:\n");
     for(i = 0; i < rows; i++) {
         printf("Row %d sum = %d\n", i + 1, rowSum[i]);
