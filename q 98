@@ -25,10 +25,10 @@ int main() {
     
     for(i = 0; i <= lastSpaceIndex; i++) {
         if(i == 0 && name[i] != ' ') {
-            printf("%c. ", toupper(name[i]));  // first initial
+            printf("%c. ", toupper(name[i]));  
         }
         if(name[i] == ' ' && name[i+1] != ' ' && name[i+1] != '\0') {
-            printf("%c. ", toupper(name[i+1]));  // subsequent initials
+            printf("%c. ", toupper(name[i+1]));  
         }
     }
 
