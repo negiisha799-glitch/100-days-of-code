@@ -6,16 +6,14 @@ int main() {
     int numerator = 2;
     int denominator = 3;
 
-    // Input number of terms
     printf("Enter the number of terms: ");
     scanf("%d", &n);
 
-    // Loop to calculate sum of the series
     for (int i = 1; i <= n; i++) {
         sum += (double)numerator / denominator;
 
-        numerator += 2;   // numerator increases by 2 each term
-        denominator += 4; // denominator increases by 4 each term
+        numerator += 2;   
+        denominator += 4; 
     }
 
     printf("Sum of the series up to %d terms is: %.2lf\n", n, sum);
