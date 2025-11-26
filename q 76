@@ -4,19 +4,18 @@ int main() {
     int matrix[10][10];
     int rows, cols, i, j, isSymmetric = 1;
 
-    // Input number of rows and columns
+    
     printf("Enter number of rows: ");
     scanf("%d", &rows);
     printf("Enter number of columns: ");
     scanf("%d", &cols);
 
-    // Check if square matrix
+    
     if(rows != cols) {
         printf("Matrix is not square, so it cannot be symmetric.\n");
         return 0;
     }
 
-    // Input matrix elements
     printf("Enter elements of the matrix:\n");
     for(i = 0; i < rows; i++) {
         for(j = 0; j < cols; j++) {
@@ -24,9 +23,8 @@ int main() {
         }
     }
 
-    // Check for symmetry
     for(i = 0; i < rows; i++) {
-        for(j = 0; j < i; j++) {  // Only check elements below the diagonal
+        for(j = 0; j < i; j++) {  
             if(matrix[i][j] != matrix[j][i]) {
                 isSymmetric = 0;
                 break;
