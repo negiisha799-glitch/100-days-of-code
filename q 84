@@ -13,7 +13,7 @@ int main() {
     while(str[i] != '\0' && str[i] != '\n') {
         ch = str[i];
         if(ch >= 'a' && ch <= 'z') {
-            str[i] = ch - 32;  // ASCII difference between lowercase and uppercase
+            str[i] = ch - 32;  
         }
         i++;
     }
