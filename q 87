@@ -21,7 +21,7 @@ int main() {
             digits++;
         } 
         else if((ch >= 'A' && ch <= 'Z') || (ch >= 'a' && ch <= 'z')) {
-            // Do nothing for letters
+            
         } 
         else {
             special++;
