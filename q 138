@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+enum Status {
+    SUCCESS = 10,
+    FAILURE,
+    TIMEOUT,
+    PENDING
+};
+
+int main() {
+    enum Status s;
+
+    const char *names[] = {"SUCCESS", "FAILURE", "TIMEOUT", "PENDING"};
+
+    printf("Enum Names and Values:\n");
+
+    for (s = SUCCESS; s <= PENDING; s++) {
+        printf("%s = %d\n", names[s - SUCCESS], s);
+    }
+
+    return 0;
+}
+
