@@ -1,0 +1,53 @@
+#include <stdio.h>
+
+struct Student {
+    char name[50];
+    int roll;
+    float marks;
+};
+
+int main() {
+    struct Student s;
+    FILE *fp;
+    int n;
+
+    // ---- Writing the records ----
+    fp = fopen("students.txt", "w");
+    if (fp == NULL) {
+        printf("Error opening file!\n");
+        return 1;
+    }
+
+    printf("How many students? ");
+    scanf("%d", &n);
+
+    for (int i = 0; i < n; i++) {
+        printf("\nEnter name: ");
+        scanf("%s", s.name);     // reads one word name
+        printf("Enter roll number: ");
+        scanf("%d", &s.roll);
+        printf("Enter marks: ");
+        scanf("%f", &s.marks);
+
+        fprintf(fp, "%s %d %.2f\n", s.name, s.roll, s.marks);
+    }
+
+    fclose(fp);
+
+    // ---- Reading the records ----
+    fp = fopen("students.txt", "r");
+    if (fp == NULL) {
+        printf("Error opening file for reading!\n");
+        return 1;
+    }
+
+    printf("\n--- Student Records ---\n");
+
+    while (fscanf(fp, "%s %d %f", s.name, &s.roll, &s.marks) == 3) {
+        printf("Name: %s  | Roll: %d  | Marks: %.2f\n", s.name, s.roll, s.marks);
+    }
+
+    fclose(fp);
+
+    return 0;
+}
