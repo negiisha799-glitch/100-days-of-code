@@ -8,7 +8,7 @@ int main() {
     scanf("%f", &percentage);
 
     
-    if (percentage >= 90 && percentage <= 100) {
+    if (percentage >= 90 && percentage < 100) {
         printf("Grade: A+\n");
     } 
     else if (percentage >= 80 && percentage < 90) {
