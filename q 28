@@ -9,7 +9,7 @@ int main() {
     
     for (i = 1; i <= n; i++) {
         if(i % 2 == 0) {
-            product *= i;
+            product = product*i;
         }
     }
     printf("Product of even numbers from 1 to %d = %d\n", n, product);
